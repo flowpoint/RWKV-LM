@@ -1,4 +1,5 @@
 *.txt
+!rwkv_vocab_v20230424.txt
 *.csv
 *.pth
 *.xlsb
@@ -6,6 +7,7 @@
 *.xls
 wandb/
 data/
+!data/demo.jsonl
 vocab.json
 *.sh
 *log/

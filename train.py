@@ -262,7 +262,8 @@ if __name__ == "__main__":
             if k.startswith('_forward_module.'):
                 load_dict[k.replace('_forward_module.','')] = load_dict[k]
                 del load_dict[k]
-    except:
+    except Exception as e:
+        print(e)
         rank_zero_info(f"Bad checkpoint {args.load_model}")
         if args.my_pile_stage >= 2:  # try again using another checkpoint
             max_p = args.my_pile_prev_p
